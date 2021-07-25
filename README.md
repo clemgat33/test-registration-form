@@ -1,3 +1,4 @@
+
 # Registration Form
 
 This is a registration form simulation for CMS
@@ -46,23 +47,23 @@ controller = [
 ## Validations & Options by type of input
 
 #### TEXT:
-Validation:
-* type: length (number of characters a string should have)
-* message (error message)
-* min
-* max
+> ##### Validation:  
+> "type": "length" (number of characters a string should have)  
+> "message" (error message)  
+> "min"  
+> "max"   
 
 #### DATE:
-Validation:
-* type: age (a limited age for a date input)
-* message (error message)
-* min (age minimum)
+> ##### Validation:  
+> * "type": "age" (a limited age for a date input)  
+> * "message" (error message)  
+> * "min" (age minimum)  
 
 #### EMAIL:
-Validation:
-* type: email (email regex)
-* message (error message)
+> ##### Validation:
+> * "type": "email" (email regex)  
+> * "message" (error message)  
 
 
 #### SELECT:
-Options (arrray of options)
+> ##### Options: [ ] (arrray of options)  
