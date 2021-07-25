@@ -3,9 +3,9 @@
 
 
 // get the max birth date to be more than 18yo
-export function getMaxBirthDate(): string{
+export function getMaxBirthDate(age: number): string{
 	let maxBirthDate = new Date();
-	maxBirthDate = new Date(maxBirthDate.setFullYear(maxBirthDate.getFullYear() - 18));
+	maxBirthDate = new Date(maxBirthDate.setFullYear(maxBirthDate.getFullYear() - age));
 
 	const maxYear = maxBirthDate.getFullYear().toString();
 
@@ -24,11 +24,11 @@ export function getMaxBirthDate(): string{
 
 
 // check if the date entered in the input is more than 18yo
-export function isDate18orMoreYearsOld(date: string): boolean {
+export function isDateValid(date: string, age: number): boolean {
 	const year = parseInt(date.slice(0, 4));
 	const month = parseInt(date.slice(5, 7));
 	const day = parseInt(date.slice(8, 10));
-	const maxBirthDate = getMaxBirthDate();
+	const maxBirthDate = getMaxBirthDate(age);
 	const maxYear = parseInt(maxBirthDate.slice(0, 4));
 	const maxMonthOnMaxYear = parseInt(maxBirthDate.slice(5, 7));
 	const maxDayOnMaxMonthOnMaxYear = parseInt(maxBirthDate.slice(8, 10));

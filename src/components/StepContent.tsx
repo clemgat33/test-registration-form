@@ -6,7 +6,7 @@ import SelectField from './fields/SelectField';
 
 import {AppContext} from '../state/context';
 
-import { isDate18orMoreYearsOld, stringLengthCheck, isEmailValid} from '../utils/validations';
+import { stringLengthCheck, isEmailValid} from '../utils/validations';
 
 import {  Field, Validation } from '../interfaces';
 
@@ -61,15 +61,11 @@ export default function StepContent(): JSX.Element {
 	function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>){
 		const value = e.currentTarget.value;
 		const name = e.currentTarget.name;
-
-		//check if age is more than 18yo
-	  if(name !== 'dateofbirth' || (name === 'dateofbirth' && isDate18orMoreYearsOld(value))){
-			dispatch({
-				type: 'UPDATE_INPUTS',
-				key: name,
-				payload: value
-			});
-		}
+		dispatch({
+			type: 'UPDATE_INPUTS',
+			key: name,
+			payload: value
+		});
 	}
 	/* ONCHANGE */
 
