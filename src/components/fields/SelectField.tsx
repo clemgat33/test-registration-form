@@ -15,7 +15,7 @@ export default function SelectField({name, field, handleChange}: Props): JSX.Ele
 	return(
 		<div className='field'>
 			<div className='field-wrapper'>
-				<label>{field.label}</label>
+				<label>{field.label} {field.required ? '*' : ''}</label>
 				<select
 					name={name}
 					value={inputs[name]}

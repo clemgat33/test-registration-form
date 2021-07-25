@@ -27,7 +27,7 @@ export default function DateField({name, field, handleChange, handleOnFocusOut}:
 	return(
 		<div className='field'>
 			<div className='field-wrapper'>
-				<label>{field.label}</label>
+				<label>{field.label} {field.required ? '*' : ''}</label>
 				<input
 					type={field.type}
 					name={name}

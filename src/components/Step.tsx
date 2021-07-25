@@ -45,6 +45,7 @@ export default function Step(): JSX.Element{
 				<div className='fields'>
 					<StepContent	/>
 				</div>
+				<div className='required'>*required fields</div>
 				<button type='submit'>{getButtonName()}</button>
 			</div>
 		</form>
