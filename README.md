@@ -34,36 +34,6 @@ controller = [
           "type": "email",
           "message": "Email format is invalid"
         }
-      },
-      {
-        "label": "First name",
-        "name": "firstname",
-        "type": "text",
-        "required": true
-      },
-      {
-        "label": "Date of birth",
-        "name": "dateofbirth",
-        "type": "date",
-        "required": true,
-        "validation": {
-          "type": "age",
-          "message": "Should be older than 18years old",
-          "min": 18
-        }
-      },
-      {
-        "label": "Address",
-        "name": "address",
-        "type": "text",
-        "required": false
-      },
-      {
-        "label": "Country",
-        "name": "country",
-        "type": "select",
-        "required": true,
-        "options": ["Germany", "Canada", "Japan", "Kuwait", "Turkey", "Brazil"]
       }
       // ..other fields
     ]
@@ -72,3 +42,27 @@ controller = [
 ]
 
 ```
+
+## Validations & Options by type of input
+
+#### TEXT:
+Validation:
+* type: length (number of characters a string should have)
+* message (error message)
+* min
+* max
+
+#### DATE:
+Validation:
+* type: age (a limited age for a date input)
+* message (error message)
+* min (age minimum)
+
+#### EMAIL:
+Validation:
+* type: email (email regex)
+* message (error message)
+
+
+#### SELECT:
+Options (arrray of options)
