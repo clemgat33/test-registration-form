@@ -46,6 +46,7 @@ controller = [
 ## Validations & Options by type of input
 
 #### TEXT:
+<<<<<<< HEAD
 Validation:
 * type: length (number of characters a string should have)
 * message (error message)
@@ -66,3 +67,18 @@ Validation:
 
 #### SELECT:
 Options (arrray of options)
+=======
+* length (for the number of characters a string should have)
+    * message (error message)
+    * min
+    * max
+
+#### DATE:
+* age (a limited age for a date input)
+    * message (error message)
+    * min
+
+#### EMAIL:
+* email (email regex)
+    * message (error message)
+>>>>>>> e5bf438dab3283803ff11226326a635b546b5496
